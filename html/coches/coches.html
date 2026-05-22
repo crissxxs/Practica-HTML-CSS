@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coches — Lux & Co.</title>
+  <title>Coches — LuxEstate</title>
   <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/coches.css">
 </head>
 <body>
 
   <!-- CABECERA -->
   <header>
-    <a href="../index.html" class="logo">Lux & Co.</a>
+    <a href="../index.html" class="logo">LUXESTATE</a>
     <nav>
       <a href="coches.html">Coches</a>
       <a href="../yates/yates.html">Yates</a>
@@ -19,11 +20,20 @@
     </nav>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <p class="hero-subtitulo">Colección exclusiva</p>
-    <h1 class="hero-titulo">Coches</h1>
-    <p class="hero-descripcion">Los automóviles más exclusivos del mundo, seleccionados para quienes exigen perfección en cada detalle.</p>
+    <!-- HERO CON VÍDEO -->
+  <section class="hero hero-video">
+    <!-- Vídeo de fondo en bucle -->
+    <video class="hero-video-fondo" autoplay muted loop playsinline>
+      <source src="../../vid/buggatibucle.mp4" type="video/mp4">
+    </video>
+    <!-- Capa oscura encima del vídeo -->
+    <div class="hero-video-overlay"></div>
+    <!-- Texto centrado encima -->
+    <div class="hero-video-contenido">
+      <p class="hero-subtitulo">Colección exclusiva</p>
+      <h1 class="hero-titulo">Coches</h1>
+      <p class="hero-descripcion">Los automóviles más exclusivos del mundo, seleccionados para quienes exigen perfección en cada detalle.</p>
+    </div>
   </section>
 
   <!-- BUGATTI -->
@@ -248,8 +258,8 @@
 
   <!-- FOOTER -->
   <footer>
-    <p class="footer-logo">Lux & Co.</p>
-    <p class="footer-texto">© 2026 Lux & Co. · Todos los derechos reservados</p>
+    <p class="footer-logo">LUXESTATE</p>
+    <p class="footer-texto">© 2026 LuxEstate · Todos los derechos reservados</p>
   </footer>
 
 </body>

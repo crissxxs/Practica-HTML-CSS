@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yates — Lux & Co.</title>
+  <title>Yates — LuxEstate</title>
   <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/yates.css">
 </head>
 <body>
 
   <header>
-    <a href="../index.html" class="logo">Lux & Co.</a>
+    <a href="../index.html" class="logo">LUXESTATE</a>
     <nav>
       <a href="../coches/coches.html">Coches</a>
       <a href="yates.html">Yates</a>
@@ -18,10 +19,20 @@
     </nav>
   </header>
 
-  <section class="hero">
-    <p class="hero-subtitulo">Alta mar</p>
-    <h1 class="hero-titulo">Yates</h1>
-    <p class="hero-descripcion">Embarcaciones de lujo para surcar los mares con la elegancia que mereces.</p>
+    <!-- HERO CON VÍDEO -->
+  <section class="hero hero-video">
+    <!-- Vídeo de fondo en bucle -->
+    <video class="hero-video-fondo" autoplay muted loop playsinline>
+      <source src="../../vid/YetchBucle.mp4" type="video/mp4">
+    </video>
+    <!-- Capa oscura encima del vídeo -->
+    <div class="hero-video-overlay"></div>
+    <!-- Texto centrado encima -->
+    <div class="hero-video-contenido">
+      <p class="hero-subtitulo">Alta mar</p>
+      <h1 class="hero-titulo">Yates</h1>
+      <p class="hero-descripcion">Embarcaciones de lujo para surcar los mares con la elegancia que mereces.</p>
+    </div>
   </section>
 
   <!-- BENETTI -->
@@ -181,8 +192,8 @@
   </section>
 
   <footer>
-    <p class="footer-logo">Lux & Co.</p>
-    <p class="footer-texto">© 2026 Lux & Co. · Todos los derechos reservados</p>
+    <p class="footer-logo">LUXESTATE</p>
+    <p class="footer-texto">© 2026 LuxEstate · Todos los derechos reservados</p>
   </footer>
 
 </body>

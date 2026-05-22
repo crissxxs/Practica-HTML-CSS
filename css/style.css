@@ -260,3 +260,57 @@ footer {
   color: var(--color-texto-suave);
   letter-spacing: 2px;
 }
+
+/* ============================================
+   HERO CON VÍDEO EN BUCLE
+   ============================================ */
+
+/* Contenedor: posición relativa para que el vídeo
+   quede dentro y el texto encima */
+.hero-video {
+  position: relative;
+  padding: 0;                        /* Quitamos el padding del hero normal */
+  height: 90vh;                      /* Ocupa casi toda la pantalla */
+  min-height: 500px;
+  overflow: hidden;                  /* Nada se sale del borde */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* El vídeo cubre todo el hero como una imagen de fondo */
+.hero-video-fondo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centrado exacto */
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover;                 /* Recorta sin deformar */
+  z-index: 0;                        /* Detrás de todo */
+}
+
+/* Capa oscura semitransparente para que el texto se lea bien */
+.hero-video-overlay {
+  position: absolute;
+  inset: 0;                          /* top/right/bottom/left = 0 */
+  background-color: rgba(0, 0, 0, 0.50);
+  z-index: 1;
+}
+
+/* El texto va encima de la capa oscura */
+.hero-video-contenido {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 60px;
+  max-width: 800px;
+}
+
+/* Reutilizamos las clases hero ya definidas arriba,
+   solo sobreescribimos el margen inferior del título */
+.hero-video-contenido .hero-titulo {
+  margin-bottom: 24px;
+}
