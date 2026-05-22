@@ -1,0 +1,262 @@
+
+:root {
+  --color-fondo:       #0a0a0a;
+  --color-superficie:  #111111;
+  --color-borde:       #2a2a2a;
+  --color-oro:         #c9a84c;
+  --color-oro-claro:   #e8c97a;
+  --color-texto:       #f0ece4;
+  --color-texto-suave: #888880;
+  --fuente-titulo:     'Cormorant Garamond', serif;
+  --fuente-cuerpo:     'Montserrat', sans-serif;
+}
+
+/*Quitamos margen y paddin por defecto del navegador*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: var(--fuente-cuerpo);
+  font-weight: 300;
+}
+
+/*Cabecera*/
+
+header {
+  display: flex;                      /* Pone los elementos en fila */
+  justify-content: space-between;     /* Uno a la izquierda, otro a la derecha */
+  align-items: center;                /* Los centra verticalmente */
+  padding: 24px 60px;
+  border-bottom: 1px solid var(--color-borde);
+  position: sticky;                   /* Se queda fija al hacer scroll */
+  top: 0;
+  background-color: var(--color-fondo);
+  z-index: 100;                       /* Queda por encima de todo */
+}
+
+/* Logo */
+.logo {
+  font-family: var(--fuente-titulo);
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  color: var(--color-oro);
+  text-decoration: none;              /* Quitamos el subrayado del enlace */
+}
+
+/* Menú de navegación */
+nav {
+  display: flex;
+  gap: 36px;                          /* Espacio entre los enlaces */
+}
+
+nav a {
+  color: var(--color-texto-suave);
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;          /* Pone el texto en mayúsculas */
+  transition: color 0.3s;             /* Animación suave al pasar el ratón */
+}
+
+nav a:hover {
+  color: var(--color-oro);            /* Cambia de color al pasar el ratón */
+}
+
+
+/*Sección Hero (Portada)*/
+.hero {
+  text-align: center;
+  padding: 120px 60px 80px;
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.hero-subtitulo {
+  font-size: 11px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: var(--color-oro);
+  margin-bottom: 24px;
+}
+
+.hero-titulo {
+  font-family: var(--fuente-titulo);
+  font-size: 80px;
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.hero-descripcion {
+  font-size: 13px;
+  color: var(--color-texto-suave);
+  letter-spacing: 1px;
+  max-width: 480px;
+  margin: 0 auto 48px;                /* auto centra horizontalmente */
+  line-height: 1.8;
+}
+
+/* Botón principal */
+.boton {
+  display: inline-block;
+  padding: 14px 40px;
+  border: 1px solid var(--color-oro);
+  color: var(--color-oro);
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.boton:hover {
+  background-color: var(--color-oro); /* Se rellena de dorado al pasar el ratón */
+  color: var(--color-fondo);
+}
+
+/* Secciones de categorías*/
+.seccion {
+  padding: 100px 60px;
+  border-bottom: 1px solid var(--color-borde);
+}
+
+/* Cabecera de cada sección (título + enlace "ver todos") */
+.seccion-cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 60px;
+}
+
+.seccion-etiqueta {
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--color-oro);
+  margin-bottom: 10px;
+}
+
+.seccion-titulo {
+  font-family: var(--fuente-titulo);
+  font-size: 52px;
+  font-weight: 300;
+}
+
+.ver-todo {
+  color: var(--color-texto-suave);
+  text-decoration: none;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--color-borde);
+  padding-bottom: 4px;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.ver-todo:hover {
+  color: var(--color-oro);
+  border-color: var(--color-oro);
+}
+
+/*Cuadricula de Tarjetas*/
+.cuadricula {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+/* Tarjeta individual */
+.tarjeta {
+  background-color: var(--color-superficie);
+  overflow: hidden;                   /* Oculta lo que salga de los bordes */
+  cursor: pointer;
+  transition: transform 0.4s;
+}
+
+.tarjeta:hover {
+  transform: translateY(-4px);        /* Sube 4px al pasar el ratón */
+}
+
+/* Imagen de la tarjeta */
+.tarjeta-imagen {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;                  /* Recorta la imagen para que encaje */
+  display: block;
+  filter: brightness(0.85);           /* La oscurece un poco */
+  transition: filter 0.4s, transform 0.4s;
+}
+
+.tarjeta:hover .tarjeta-imagen {
+  filter: brightness(1);              /* Brillo normal al pasar el ratón */
+  transform: scale(1.03);             /* Se agranda ligeramente */
+}
+
+/* Contenido de la tarjeta */
+.tarjeta-contenido {
+  padding: 28px;
+}
+
+.tarjeta-marca {
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-oro);
+  margin-bottom: 8px;
+}
+
+.tarjeta-nombre {
+  font-family: var(--fuente-titulo);
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.tarjeta-detalle {
+  font-size: 11px;
+  color: var(--color-texto-suave);
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.tarjeta-precio {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--color-texto-suave);
+  border-top: 1px solid var(--color-borde);
+  padding-top: 16px;
+}
+
+.tarjeta-precio span {
+  color: var(--color-texto);
+  font-size: 16px;
+  font-family: var(--fuente-titulo);
+}
+
+
+/*Footer*/
+footer {
+  padding: 60px;
+  text-align: center;
+  border-top: 1px solid var(--color-borde);
+}
+
+.footer-logo {
+  font-family: var(--fuente-titulo);
+  font-size: 24px;
+  letter-spacing: 6px;
+  color: var(--color-oro);
+  margin-bottom: 24px;
+}
+
+.footer-texto {
+  font-size: 11px;
+  color: var(--color-texto-suave);
+  letter-spacing: 2px;
+}
