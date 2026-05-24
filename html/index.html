@@ -18,14 +18,23 @@
     </header>
 
 <!--Portada-->
-<section class="hero">
-    <p class="hero-subtitulo">El mercado del lujo</p>
-    <h1 class="hero-titulo">Lo extraordinario<br>te espera</h1>
-    <p class="hero-descripcion">
-        Descubre una selección exclusiva de los objetos más deseados del mundo.
-        Coches, yates, jets privados y relojes de alta gama.
-    </p>
-    <a href="#coches" class="boton">Explorar ahora</a>
+<section class="hero hero-video">
+    <!-- Vídeo de fondo en bucle -->
+    <video class="hero-video-fondo" autoplay muted loop playsinline>
+        <source src="../vid/indexvideo.mp4" type="video/mp4">
+    </video>
+    <!-- Capa oscura encima del vídeo -->
+    <div class="hero-video-overlay"></div>
+    <!-- Texto centrado encima -->
+    <div class="hero-video-contenido">
+        <p class="hero-subtitulo">El mercado del lujo</p>
+        <h1 class="hero-titulo">Lo extraordinario<br>te espera</h1>
+        <p class="hero-descripcion">
+            Descubre una selección exclusiva de los objetos más deseados del mundo.
+            Coches, yates, jets privados y relojes de alta gama.
+        </p>
+        <a href="#coches" class="boton">Explorar ahora</a>
+    </div>
 </section>
 
 <!--Tarjetas Coches-->
