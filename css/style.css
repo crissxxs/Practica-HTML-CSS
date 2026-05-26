@@ -346,11 +346,35 @@ footer {
 
 /*Formulario*/
 
+/* =========================
+   CONTACTO
+========================= */
+
+.contacto-layout{
+  display:flex;
+  gap:80px;
+}
+
+.columna-formulario{
+  width:45%;
+}
+
+.columna-tabla{
+  width:55%;
+}
+
+.historia-texto{
+  color:#888;
+  line-height:1.8;
+  margin:20px 0;
+}
+
+/* FORMULARIO */
+
 .formulario{
   display:flex;
   flex-direction:column;
   gap:20px;
-  max-width:600px;
 }
 
 .formulario input,
@@ -369,10 +393,21 @@ footer {
   color:black;
   cursor:pointer;
 }
-/*contacto aplicado en el footer*/
-.footer-contacto{
+
+/* TABLA */
+
+.tabla{
+  width:100%;
+  border-collapse:collapse;
+}
+
+.tabla th,
+.tabla td{
+  padding:15px;
+  border-bottom:1px solid #333;
+  text-align:left;
+}
+
+.tabla th{
   color:#c9a84c;
-  text-decoration:none;
-  display:block;
-  margin-top:15px;
 }
