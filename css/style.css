@@ -260,7 +260,10 @@ footer {
   color: var(--color-texto-suave);
   letter-spacing: 2px;
 }
-
+.footer-contacto{/*quitamos el subrayado*/
+  text-decoration: none;
+  color: var(--color-oro);
+}
 /* ============================================
    HERO CON VÍDEO EN BUCLE
    ============================================ */
