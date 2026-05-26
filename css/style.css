@@ -343,3 +343,36 @@ footer {
   transform:scale(1.03);
   border-color:var(--color-oro);
 }
+
+/*Formulario*/
+
+.formulario{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  max-width:600px;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea{
+  padding:15px;
+  background:#111;
+  border:1px solid #333;
+  color:white;
+}
+
+.formulario button{
+  padding:15px;
+  background:#c9a84c;
+  border:none;
+  color:black;
+  cursor:pointer;
+}
+/*contacto aplicado en el footer*/
+.footer-contacto{
+  color:#c9a84c;
+  text-decoration:none;
+  display:block;
+  margin-top:15px;
+}
